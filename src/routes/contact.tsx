@@ -6,7 +6,7 @@ const Contact = () => {
       </header>
       <div className='flex-1'></div>
     </div>
-  )
-}
+  );
+};
 
-export default Contact
+export default Contact;
