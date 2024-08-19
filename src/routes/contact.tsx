@@ -3,18 +3,19 @@ import { RootState } from '../redux';
 import Button from '../ui/Button';
 import { Link } from 'react-router-dom';
 import ContactCard from '../components/ContactCard';
+import PageLayout from '../ui/PageLayout';
 
 // Contact Route component
 const Contact = () => {
   const contacts = useSelector((state: RootState) => state.contacts.contacts);
   return (
-    <div className='flex-1 flex flex-col'>
-      <header className='flex px-3 justify-between items-center bg-gray-100 border border-b-gray-200 h-12'>
+    <PageLayout>
+      <PageLayout.Header>
         <h2 className='ml-7 md:ml-0'>Contact Page</h2>
         <Link to='/create'>
           <Button>Create Contact</Button>
         </Link>
-      </header>
+      </PageLayout.Header>
       <div className='flex-1 overflow-y-scroll'>
         {contacts.length > 0 ? (
           <div className='flex flex-wrap p-5 sm:p-10 gap-6 justify-center'>
@@ -35,7 +36,7 @@ const Contact = () => {
           </div>
         )}
       </div>
-    </div>
+    </PageLayout>
   );
 };
 

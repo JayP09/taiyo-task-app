@@ -5,6 +5,7 @@ import { addContact, editContact } from '../redux/contactSlice';
 import { v4 as uuidv4 } from 'uuid';
 import { useNavigate, useParams } from 'react-router-dom';
 import { RootState } from '../redux';
+import PageLayout from '../ui/PageLayout';
 
 // contactform Component for creating and editing contact
 const ContactForm = () => {
@@ -63,10 +64,12 @@ const ContactForm = () => {
     formState.firstName.trim() !== '' && formState.lastName.trim() !== '';
 
   return (
-    <div className='flex-1 flex flex-col'>
-      <header className='flex px-3 justify-between items-center bg-gray-100 border border-b-gray-200 h-12'>
-        <h2 className='ml-7 md:ml-0'>Create Contact Page</h2>
-      </header>
+    <PageLayout>
+      <PageLayout.Header>
+        <h2 className='ml-7 md:ml-0'>
+          {contactId ? 'Edit Contact Page' : 'Create Contact Page'}
+        </h2>
+      </PageLayout.Header>
       <div className='flex-1 flex justify-center items-center'>
         <form
           onSubmit={handleSubmit}
@@ -133,7 +136,7 @@ const ContactForm = () => {
           </Button>
         </form>
       </div>
-    </div>
+    </PageLayout>
   );
 };
 

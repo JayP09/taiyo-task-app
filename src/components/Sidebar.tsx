@@ -36,7 +36,11 @@ const Sidebar = () => {
           isOpen ? 'translate-x-0' : '-translate-x-full'
         } md:translate-x-0`}>
         <div className='flex items-center justify-between'>
-          <h1 className='text-3xl font-bold text-customRed'>Logo</h1>
+          <Link
+            to='/'
+            className='text-3xl font-bold text-customRed cursor-pointer'>
+            Logo
+          </Link>
           <CancelIcon
             onClick={toggleSidebar}
             className='text-customRed stroke-2 cursor-pointer md:hidden'
