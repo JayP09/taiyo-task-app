@@ -1,3 +1,9 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+  .chart-container {
+    @apply w-full h-full font-medium bg-gray-200 border border-gray-200 shadow rounded-md;
+  }
+}

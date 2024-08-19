@@ -1,8 +1,8 @@
-# Getting Started with Create React App
+# Taiyo Task App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This app allows you to manage contact and show Charts and Maps for covid19 data
 
-## Available Scripts
+## Installation
 
 In the project directory, you can run:
 
